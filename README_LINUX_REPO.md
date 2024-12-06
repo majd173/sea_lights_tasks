@@ -1,4 +1,4 @@
-# Linux automation dicription
+# Linux automation discription
 ## Dear visitor follow the steps below in order to run the automation script
 ## using linux system.
 ### 1. Open firefox in linux system
