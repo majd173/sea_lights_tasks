@@ -1,5 +1,5 @@
 import unittest
-from sea_lights_tasks.ci_cd_tasks.src.calculator import Calculator
+from sea_lights_tasks.ci_cd_tasks.calculator.src.calculator import Calculator
 
 class TestCalculator(unittest.TestCase):
     """
