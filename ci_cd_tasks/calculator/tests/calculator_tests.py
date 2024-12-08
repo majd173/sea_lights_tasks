@@ -21,6 +21,7 @@ class TestCalculator(unittest.TestCase):
             self, 5, 3), 7, "Result must be wrong")
 
     def test_valid_subtraction(self):
+
         """
         This method tests valid subtraction process.
         """
