@@ -1,5 +1,5 @@
 # Dear visitor!
-## This dirictory manages a calculator small app with unit test for different math functions.
+## This directory manages a calculator small app with unit test for different math functions.
 ### Please follow the steps below in order to run the app on you system:
 #### 1. Open pycharm and clone this git link
 #### 2. navigate to: sea_lights_tasks/calculator/src
