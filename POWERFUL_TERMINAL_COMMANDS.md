@@ -1,4 +1,4 @@
-# Dear visitor this file contains some powerful terminal commands in different fields: linux, docker and more
+# <span style="color:blue">Dear visitor this file contains some powerful terminal commands in different fields: linux, docker and more</span>
 ## Linux
 ### 1. "sudo mkdir <dir_name>": creates a directory with a specific name in the same location
 ### 2. "sudo rm -r <dir_name>": removes a directory that cant be removed manually
