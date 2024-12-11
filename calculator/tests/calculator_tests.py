@@ -1,5 +1,5 @@
 import unittest
-from sea_lights_tasks.calculator.src.calculator import Calculator
+from sea_lights_tasks.calculator.src.calculator_class import Calculator
 
 class TestCalculator(unittest.TestCase):
     """
@@ -68,7 +68,7 @@ class TestCalculator(unittest.TestCase):
         This method tests division by zero.
         """
         self.assertEqual(Calculator.division_function(
-            7, 0), "Wrong, division by zero", "Wrong result, messages are equal")
+            7, 0), "Wrong! division by zero", "Wrong result, messages are equal")
 
 if __name__ == "__main__":
     unittest.main()

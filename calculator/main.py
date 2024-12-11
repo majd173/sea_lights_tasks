@@ -1,4 +1,6 @@
-from sea_lights_tasks.calculator.src.calculator import Calculator
+from src.calculator_class import Calculator
+
+
 def main_calculator():
     """
     This function runs the calculator with it's all functions.
@@ -36,4 +38,8 @@ def main_calculator():
         except Exception as e:
             print(e)
 
-main_calculator()
+
+
+
+if __name__ == '__main__':
+    main_calculator()
