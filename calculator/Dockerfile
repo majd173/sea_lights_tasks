@@ -6,17 +6,11 @@ WORKDIR /app
 
 ADD . /app
 
-# The needed file
-
-# RUN pip install unittest
-# Requirementsdef print_text():
-
-
 CMD [ "python", "./main.py" ]
-# The entry command when stsrting the container, simply runs main file
+# The entry command when starting the container, simply runs main file
 
-# After that in terminal you need to buill an  image, insert:
+# After that in terminal you need to build an  image, insert:
 # 1.docker build -t <name of image>
 # 2. docker run <name of image> (if there is no input option)/
-# docker run -t -i <name of image> (if there is an nput option) - i: interactive mode/t: sudo terminal
+# docker run -t -i <name of image> (if there is an input option) - i: interactive mode/t: sudo terminal
 
