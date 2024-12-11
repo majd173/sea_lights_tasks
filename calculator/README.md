@@ -13,3 +13,4 @@
 ### Please follow the steps below in order to run the docker container of the calculator app:
 #### 1. navigate calculator directory, right click on directory and "open in terminal"
 #### 2. insert: docker run -t -i majdb173/calculator
+

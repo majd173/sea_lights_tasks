@@ -1,5 +1,5 @@
 import unittest
-from sea_lights_tasks.calculator.src.calculator_class import Calculator
+from calculator.src.calculator_class import Calculator
 
 class TestCalculator(unittest.TestCase):
     """
