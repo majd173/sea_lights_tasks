@@ -7,8 +7,8 @@
 ## <span style="color:orange">Docker</span>
 ### 1. "docker login": logs into docker account
 ### 2. "docker images": shows created images
-### 3. "docker build -t <image_name> .": build an image with a specific name
-### 4. "docker build -t -i <image_name> .": builds an image with a specific name of a file with inputs options
+### 3. "docker build -t <image_name> .": builds an image with a specific name
+### 4. "docker run -t -i <image_name>" or "docker run -it <image_name>: runs an image with a specific name of a file with inputs options
 ### 5. "docker tag <image_name> <account-name>/<repository_name>:<tag>": tags the image with the specific repo.
 ### 6. "docker push <account_name>/<repository_name>:<tag>
 ### 7. "docker rmi -f <image_id>": force remove an image
