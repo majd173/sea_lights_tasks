@@ -17,7 +17,7 @@ class Account:
         :param username:
         :param password:        """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             if any(user["username"] == username for user in users):
@@ -25,13 +25,13 @@ class Account:
                 return
             users.append({"username": username, "password": password})
             data["users"] = users
-            with open(r'C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json', 'w') as f:
+            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'w') as f:
                 json.dump(data, f, indent=4)
             print(f"Sign up successful, {username} was created.")
         except json.decoder.JSONDecodeError:
             print("Corrupted accounts.json file. Creating a new one.")
             data = {"users": [{"username": username, "password": password}]}
-            with open(r"C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json", "w") as f:
+            with open(r"C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json", "w") as f:
                 json.dump(data, f, indent=4)
             print(f"Sign up successful, {username} was created.")
         except Exception as e:
@@ -45,7 +45,7 @@ class Account:
         :param password:
         """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             for user in users:
@@ -70,7 +70,7 @@ class Account:
         :return:
         """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             return [user["username"] for user in users]
@@ -91,14 +91,14 @@ class Account:
         :param username:
         """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             for user in users:
                 if user["username"] == username:
                     users.remove(user)
                     data["users"] = users
-                    with open(r'C:\Users\Admin\Desktop\majd\Python_& _Automation\pycharm_sea_lights\calculator\accounts.json', 'w') as f:
+                    with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'w') as f:
                         json.dump(data, f, indent=4)
                     print(f"User: {username} removed successfully")
                     return
