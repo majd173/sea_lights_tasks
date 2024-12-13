@@ -1,4 +1,5 @@
 from src.calculator_class import Calculator
+from src.account_class import Account
 
 
 def main_calculator():
@@ -9,7 +10,8 @@ def main_calculator():
         try:
             print("Welcome to the calculator app!")
             option = input("Please choose an option:\n1.Addition\n"
-                           "2.Subtraction\n3.Multiplication\n4.Division\n5.Exit\n")
+                           "2.Subtraction\n3.Multiplication\n4.Division\n"
+                           "5. Sign in\n6. Sign up\n7.Exit\n")
             if option == "1":
                 first_number = int(input("Please insert first number: "))
                 second_number = int(input("Please insert second number: "))
@@ -31,14 +33,22 @@ def main_calculator():
                 result = Calculator.division_function(first_number, second_number)
                 print(f'{result}\n')
             elif option == "5":
+                username = input("Please insert username: ")
+                password = input("Please insert password: ")
+                Account.sign_in(username, password)
+                continue
+            elif option == "6":
+                username = input("Please insert username: ")
+                password = input("Please insert password: ")
+                Account.sign_up(username, password)
+                continue
+            elif option == "7":
                 print("Goodbye!")
                 exit()
             else:
                 print("Please insert a correct option.")
         except Exception as e:
             print(e)
-
-
 
 
 if __name__ == '__main__':

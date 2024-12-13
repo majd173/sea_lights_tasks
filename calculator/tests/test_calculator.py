@@ -1,6 +1,7 @@
 import unittest
 from calculator.src.calculator_class import Calculator
 
+
 class TestCalculator(unittest.TestCase):
     """
     This class manages tests for Calculator class.
@@ -21,7 +22,6 @@ class TestCalculator(unittest.TestCase):
             5, 3), 7, "Result must be wrong")
 
     def test_valid_subtraction(self):
-
         """
         This method tests valid subtraction process.
         """
@@ -69,6 +69,7 @@ class TestCalculator(unittest.TestCase):
         """
         self.assertEqual(Calculator.division_function(
             7, 0), "Wrong! division by zero", "Wrong result, messages are equal")
+
 
 if __name__ == "__main__":
     unittest.main()

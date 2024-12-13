@@ -1,3 +1,6 @@
+import json
+
+
 class Calculator:
     """
     This class manages different function on maths processes.
@@ -63,3 +66,4 @@ class Calculator:
                 print(f'{a} / {b} = {result}')
                 return a / b
             return "Wrong! division by zero"
+

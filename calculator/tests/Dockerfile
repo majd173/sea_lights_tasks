@@ -12,7 +12,7 @@ ADD . /app
 # Requirements def print_text():
 
 
-CMD [ "python", "./calculator_tests.py" ]
+CMD [ "python", "./test_calculator.py" ]
 # The entry command when starting the container, simply runs main file
 
 # After that in terminal you need to build an  image, insert:
