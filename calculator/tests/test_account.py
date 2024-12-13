@@ -1,4 +1,3 @@
-import json
 import unittest
 from sea_lights_tasks.calculator.src.account_class import Account
 

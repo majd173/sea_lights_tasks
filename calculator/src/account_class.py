@@ -31,7 +31,7 @@ class Account:
         except json.decoder.JSONDecodeError:
             print("Corrupted accounts.json file. Creating a new one.")
             data = {"users": [{"username": username, "password": password}]}
-            with open(r"C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json", "w") as f:
+            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', "w") as f:
                 json.dump(data, f, indent=4)
             print(f"Sign up successful, {username} was created.")
         except Exception as e:
@@ -108,4 +108,3 @@ class Account:
         except Exception as e:
             print(e)
 
-Account.sign_up("11", "1")
