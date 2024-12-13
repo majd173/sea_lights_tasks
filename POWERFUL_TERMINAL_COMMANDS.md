@@ -10,5 +10,5 @@
 ### 3. "docker build -t <image_name> .": builds an image with a specific name
 ### 4. "docker run -t -i <image_name>" or "docker run -it <image_name>: runs an image with a specific name of a file with inputs options
 ### 5. "docker tag <image_name>:<tag_name> <repository_name>:<tag_name>": tags the image with the specific repo.
-### 6. "docker push <account_name>/<repository_name>:<tag>
+### 6. "docker push <account_name>/<repository_name>:<tag>": tage am image to a repository
 ### 7. "docker rmi -f <image_id>": force remove an image
