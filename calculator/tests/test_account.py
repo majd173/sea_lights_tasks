@@ -1,6 +1,5 @@
-import json
 import unittest
-from calculator.src.account_class import Account
+from sea_lights_tasks.calculator.src.account_class import Account
 
 
 class TestAccount(unittest.TestCase):
