@@ -11,7 +11,7 @@ class Account:
         self._username = username
         self._password = password
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        self._config = os.path.join(base_dir, r'..\accounts.json')
+        self._config = os.path.join(base_dir, r'../accounts.json')
 
     # @staticmethod
     def sign_up(self, username, password):
