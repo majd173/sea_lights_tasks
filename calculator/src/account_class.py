@@ -1,4 +1,5 @@
 import json
+import os
 
 
 class Account:
@@ -6,18 +7,20 @@ class Account:
     This class manages sign in and sign up process.
     """
 
-    def __init__(self, username, password):
+    def __init__(self, username=None, password=None):
         self._username = username
         self._password = password
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config = os.path.join(base_dir, r'..\accounts.json')
 
-    @staticmethod
-    def sign_up(username, password):
+    # @staticmethod
+    def sign_up(self, username, password):
         """
         This function manages sign up process.
         :param username:
         :param password:        """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(self._config, 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             if any(user["username"] == username for user in users):
@@ -25,27 +28,26 @@ class Account:
                 return
             users.append({"username": username, "password": password})
             data["users"] = users
-            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'w') as f:
+            with open(self._config, 'w') as f:
                 json.dump(data, f, indent=4)
             print(f"Sign up successful, {username} was created.")
         except json.decoder.JSONDecodeError:
             print("Corrupted accounts.json file. Creating a new one.")
             data = {"users": [{"username": username, "password": password}]}
-            with open(r"C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json", "w") as f:
+            with open(self._config, "w") as f:
                 json.dump(data, f, indent=4)
             print(f"Sign up successful, {username} was created.")
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
 
-    @staticmethod
-    def sign_in(username, password):
+    def sign_in(self, username, password):
         """
         This function manages sign in process.
         :param username:
         :param password:
         """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(self._config, 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             for user in users:
@@ -63,14 +65,13 @@ class Account:
         except Exception as e:
             print(e)
 
-    @staticmethod
-    def list_users():
+    def list_users(self):
         """
         This function lists all users.
         :return:
         """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(self._config, 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             return [user["username"] for user in users]
@@ -84,21 +85,21 @@ class Account:
             print(e)
             return []
 
-    @staticmethod
-    def remove_user(username):
+    def remove_user(self, username):
         """
         This function removes a user.
         :param username:
         """
         try:
-            with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'r') as f:
+            with open(self._config, 'r') as f:
                 data = json.load(f)
             users = data.get("users", [])
             for user in users:
                 if user["username"] == username:
                     users.remove(user)
                     data["users"] = users
-                    with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json', 'w') as f:
+                    with open(r'C:\Users\Admin\Desktop\majd\tricentis\pycharm_sea_lights\calculator\accounts.json',
+                              'w') as f:
                         json.dump(data, f, indent=4)
                     print(f"User: {username} removed successfully")
                     return
@@ -107,5 +108,3 @@ class Account:
             print("An error occurred while reading the file")
         except Exception as e:
             print(e)
-
-Account.sign_up("11", "1")

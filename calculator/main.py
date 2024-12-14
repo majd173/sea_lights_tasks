@@ -35,12 +35,14 @@ def main_calculator():
             elif option == "5":
                 username = input("Please insert username: ")
                 password = input("Please insert password: ")
-                Account.sign_in(username, password)
+                user = Account()
+                user.sign_in(username, password)
                 continue
             elif option == "6":
                 username = input("Please insert username: ")
                 password = input("Please insert password: ")
-                Account.sign_up(username, password)
+                user = Account()
+                user.sign_up(username, password)
                 continue
             elif option == "7":
                 print("Goodbye!")
