@@ -6,7 +6,7 @@ class TestAccount(unittest.TestCase):
 
     def setUp(self):
         """
-        This method sets up the test environment,
+        This method sets up the test environment and
         creates a new user and adds it to the list of users.
         """
         self._user = Account()
