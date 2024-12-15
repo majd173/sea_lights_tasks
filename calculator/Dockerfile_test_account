@@ -6,13 +6,12 @@ WORKDIR /app
 
 ADD . /app
 
-# The needed file
 
-# RUN pip install unittest
-# Requirements def print_text():
+# Set PYTHONPATH explicitly (overwrite or set from scratch)
+ENV PYTHONPATH=/app
 
 
-CMD [ "python", "./test_calculator.py" ]
+CMD ["python", "-m", "tests.test_account"]
 # The entry command when starting the container, simply runs main file
 
 # After that in terminal you need to build an  image, insert:
