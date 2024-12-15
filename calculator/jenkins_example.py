@@ -1,1 +1,1 @@
-print("say thank for god!!!!")
+print("try to laugh even life ignores you!")
