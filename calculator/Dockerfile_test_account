@@ -7,11 +7,11 @@ WORKDIR /app
 ADD . /app
 
 
-# Set PYTHONPATH explicitly (overwrite or set from scratch)
+# Set PYTHONPATH to the app directory
 ENV PYTHONPATH=/app
 
 
-CMD ["python", "-m", "tests.test_account"]
+CMD ["python", "-m", "unittest", "discover", "-s", "tests"]
 # The entry command when starting the container, simply runs main file
 
 # After that in terminal you need to build an  image, insert:
