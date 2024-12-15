@@ -11,7 +11,7 @@ ADD . /app
 ENV PYTHONPATH=/app
 
 
-CMD ["python", "-m", "unittest", "tests.test_account"]
+CMD ["python", "-m", "unittest", "tests.test_calculator"]
 # The entry command when starting the container, simply runs main file
 
 # After that in terminal you need to build an  image, insert:
