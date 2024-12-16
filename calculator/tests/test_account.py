@@ -11,7 +11,7 @@ class TestAccount(unittest.TestCase):
         """
         print("____________ Testing Calculator ____________")
         self._user = Account()
-        self._user.sign_up("pos", "pos")
+        self._user.sign_up("positive", "123456789")
 
     def tearDown(self):
         """
@@ -25,4 +25,4 @@ class TestAccount(unittest.TestCase):
         """
         This method tests valid sign up process.
         """
-        self.assertIn("pos", self._user.list_users(), "The user: pos was not added to the list of users")
+        self.assertIn("positive", self._user.list_users(), "The user: pos was not added to the list of users")
