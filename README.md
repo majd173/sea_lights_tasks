@@ -3,6 +3,6 @@
 ## linux_automation_script: this branch manages an automation script done by linux system.
 ## sdlc: this branch manages two tasks about SDLC (software development lifecycle).
 ## ci/cd_tasks: this branch manages continuous integration & continuous deployment tasks.
-## For more information:
+## For more information contact me via gmail:
 ### <span style="color:orange">Email: majdb173@gmail.com</span>
 
