@@ -19,7 +19,7 @@ class TestAccount(unittest.TestCase):
         removes the created user from the list of users.
         """
         self._user.remove_user("pos")
-        print("____________ End of testing Calculator ____________")
+        print("____________ testing Calculator End ____________")
 
     def test_valid_sign_up(self):
         """
