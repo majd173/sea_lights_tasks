@@ -1,1 +1,1 @@
-print("stay always positive@@@")
+print("try to laugh even lfe ignores you")
