@@ -5,6 +5,7 @@ from calculator.src.calculator_class import Calculator
 class TestCalculator(unittest.TestCase):
     """
     This class manages tests for Calculator class.
+    including different math functions.
     """
 
     def setUp(self):
