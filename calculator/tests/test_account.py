@@ -9,6 +9,7 @@ class TestAccount(unittest.TestCase):
         This method sets up the test environment and
         creates a new user and adds it to the list of users.
         """
+        print("____________ Testing Calculator ____________")
         self._user = Account()
         self._user.sign_up("pos", "pos")
 
@@ -18,6 +19,7 @@ class TestAccount(unittest.TestCase):
         removes the created user from the list of users.
         """
         self._user.remove_user("pos")
+        print("____________ End of testing Calculator ____________")
 
     def test_valid_sign_up(self):
         """

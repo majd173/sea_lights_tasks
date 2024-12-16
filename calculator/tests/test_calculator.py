@@ -7,6 +7,13 @@ class TestCalculator(unittest.TestCase):
     This class manages tests for Calculator class.
     """
 
+    def setUp(self):
+        """
+        This method sets up the test environment.
+        it prints a specific message before each test.
+        """
+        print("____________ Testing Calculator ____________")
+
     def test_valid_addition(self):
         """
         This method tests valid addition process.
