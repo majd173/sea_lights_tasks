@@ -11,18 +11,18 @@ class TestAccount(unittest.TestCase):
         """
         print("____________ Testing Calculator ____________")
         self._user = Account()
-        self._user.sign_up("positive", "123456789")
+        self._user.sign_up("positive!", "123456789")
 
     def tearDown(self):
         """
         This method cleans up the test environment,
         removes the created user from the list of users.
         """
-        self._user.remove_user("pos")
+        self._user.remove_user("positive!")
         print("____________ testing Calculator End ____________")
 
     def test_valid_sign_up(self):
         """
         This method tests valid sign up process.
         """
-        self.assertIn("positive", self._user.list_users(), "The user: pos was not added to the list of users")
+        self.assertIn("positive!", self._user.list_users(), "The user: pos was not added to the list of users")
