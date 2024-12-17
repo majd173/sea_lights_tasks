@@ -8,7 +8,7 @@ def main_calculator():
     """
     while True:
         try:
-            print("Welcome to the calculator app!")
+            print("Welcome to the calculator app!!")
             option = input("Please choose an option:\n1.Addition\n"
                            "2.Subtraction\n3.Multiplication\n4.Division\n"
                            "5. Sign in\n6. Sign up\n7.Exit\n")
