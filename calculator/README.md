@@ -19,3 +19,6 @@
 #### 2. insert: docker run -t -i majdb173/calculator
 #### This will run the Calculator app.
 
+### Please follow the steps bellow in order to view the pipeline plan:
+#### 1. in calculator directory navigate to calculator_ci_cd_pipeline file
+
