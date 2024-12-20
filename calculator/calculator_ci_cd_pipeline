@@ -1,0 +1,91 @@
+Hello!
+This file contains an example of the Calculator app ci/cd popeline, the pipeline steps are explained below:
+1. cloning a github repository
+2. capturing a commit message
+3. running a specific unittest file (test_account.py)
+
+------------------------------------------------------------------------------
+the pipeline script:
+#(done by linux)
+
+pipeline {
+    agent any
+
+    triggers {
+        githubPush() // Trigger the pipeline when a GitHub push event occurs
+    }
+    
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                // Clone the GitHub repository
+                git branch: 'ci/cd_tasks', 
+                    url: 'https://github.com/majd173/sea_lights_tasks.git',
+                    credentialsId: 'github-id'
+
+                    
+            }
+        }
+
+        stage('Run main calculator app file') {
+            steps {
+                // Run the Python script
+                sh "python3 -m unittest calculator.tests.test_account"
+            }
+        }
+    }
+}
+
+---------------------------------------------------------------------------------
+The build console output:
+
+Started by GitHub push by majd173
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins
+ in /var/lib/jenkins/workspace/test_accounts
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clone Repository)
+[Pipeline] git
+The recommended git tool is: NONE
+using credential github-id
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/test_accounts/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/majd173/sea_lights_tasks.git # timeout=10
+Fetching upstream changes from https://github.com/majd173/sea_lights_tasks.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/majd173/sea_lights_tasks.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/ci/cd_tasks^{commit} # timeout=10
+Checking out Revision e941ab076f8a6ddf3fa343a5cec4b73d83342e6a (refs/remotes/origin/ci/cd_tasks)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e941ab076f8a6ddf3fa343a5cec4b73d83342e6a # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D ci/cd_tasks # timeout=10
+ > git checkout -b ci/cd_tasks e941ab076f8a6ddf3fa343a5cec4b73d83342e6a # timeout=10
+Commit message: "Update test_account.py"
+ > git rev-list --no-walk 29a056477d50571f88e9d99c43b3791e7803a12c # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run main calculator app file)
+[Pipeline] sh
++ python3 -m unittest calculator.tests.test_account
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+____________ Testing Calculator ____________
+Sign up successful, positive!!! was created.
+User: positive!!! removed successfully
+____________ testing Calculator End ____________
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
